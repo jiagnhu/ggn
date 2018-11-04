@@ -1,0 +1,15 @@
+{
+	"description": "广告牛商城",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"appid": "wx47930efcc0e0fb79",
+	"projectname": "ggn",
+	"miniprogramRoot": "dist/",
+	"condition": {}
+}

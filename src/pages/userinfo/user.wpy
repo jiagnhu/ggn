@@ -1,0 +1,112 @@
+<style lang="less">
+</style>
+<template>
+  <view class="container">
+      <view>你好广告牛```</view>
+      <i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
+      <i-panel title="基础用法" style="width:100%">
+          <i-input value="{{ value1 }}" title="收货人" autofocus placeholder="名字" bind:change = "inptChange" />
+          <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="请输入手机号" />
+          <i-input value="{{ value4 }}" title="用户信息" disabled='true' />
+      </i-panel>
+      <input bindinput="inptChange"/>
+      <view> {{ value }}</view>
+      <i-grid style="width:100%">
+        <i-row>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="activity" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="addressbook" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="barrage" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+        </i-row>
+        <i-row>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="collection" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="computer" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="coupons" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+        </i-row>
+        <i-row>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="flag" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="interactive" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+            <i-grid-item>
+                <i-grid-icon>
+                    <i-icon size="24" type="mail" />
+                    <i-grid-label>宫格</i-grid-label>
+                </i-grid-icon>
+            </i-grid-item>
+        </i-row>
+    </i-grid>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class User extends wepy.page {
+  config = {
+    navigationBarTitleText: '用户信息',
+  };
+  components = {};
+
+  data = {
+    value: '',
+    value1: '',
+    value2: '',
+    value3: '',
+    value4: '输入框已禁用'
+  };
+
+  computed = {};
+
+  methods = {
+    handleClick () {
+      this.value = '江湖'
+    },
+    inptChange (event) {
+      console.log(event)
+      this.value1 = event.detail.detail.value
+      this.value = event.detail.detail.value
+    }
+  };
+
+  events = {};
+
+  onLoad() {}
+}
+</script>
